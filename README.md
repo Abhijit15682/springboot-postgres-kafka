@@ -61,6 +61,10 @@ docker exec -it devcontainer-kafka-1 bash
 
 # Start the supporting services:
 docker compose -f docker-compose.yml up -d
+
+sudo apt update
+sudo apt install maven -y
+
 # Start the app:
 mvn spring-boot:run
 # Create an order:
