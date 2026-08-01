@@ -1,0 +1,1 @@
+curl -X POST "http://localhost:8080/orders?userId=1&productId=1&quantity=2"

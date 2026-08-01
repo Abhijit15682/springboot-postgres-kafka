@@ -1,0 +1,37 @@
+{
+  "name": "Spring Boot, Kafka & Postgres",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/workspace",
+  
+  // Features add tools like Docker-in-Docker to run docker commands inside the Codespace
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {
+       "moby": false
+    },
+    "ghcr.io/devcontainers/features/java:1": {
+      "version": "25"
+    }
+  },
+
+  // Useful VS Code extensions for this stack
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "vscjava.vscode-java-pack",      // Java Extension Pack
+        "vmware.vscode-spring-boot",     // Spring Boot Tools
+        "vscjava.vscode-spring-initializr", 
+        "cweijan.vscode-database-client2", // SQL Client for Postgres
+        "ms-azuretools.vscode-docker"    // Docker UI
+      ]
+    }
+  },
+
+  // Ensure ports are accessible outside the container
+  "forwardPorts": [
+    8080,
+    5432,
+    9092
+  ],
+  "postCreateCommand": "java -version"
+}

@@ -1,0 +1,12 @@
+/workspaces/springboot-postgres-kafka/src/main/java/com/example/demo/DemoApplication.java
+/workspaces/springboot-postgres-kafka/src/main/java/com/example/demo/controller/OrderController.java
+/workspaces/springboot-postgres-kafka/src/main/java/com/example/demo/events/OrderEvent.java
+/workspaces/springboot-postgres-kafka/src/main/java/com/example/demo/model/OrderEntity.java
+/workspaces/springboot-postgres-kafka/src/main/java/com/example/demo/model/ProductEntity.java
+/workspaces/springboot-postgres-kafka/src/main/java/com/example/demo/model/UserEntity.java
+/workspaces/springboot-postgres-kafka/src/main/java/com/example/demo/repository/OrderRepository.java
+/workspaces/springboot-postgres-kafka/src/main/java/com/example/demo/repository/ProductRepository.java
+/workspaces/springboot-postgres-kafka/src/main/java/com/example/demo/repository/UserRepository.java
+/workspaces/springboot-postgres-kafka/src/main/java/com/example/demo/service/DatabaseSeeder.java
+/workspaces/springboot-postgres-kafka/src/main/java/com/example/demo/service/OrderConsumer.java
+/workspaces/springboot-postgres-kafka/src/main/java/com/example/demo/service/OrderService.java
