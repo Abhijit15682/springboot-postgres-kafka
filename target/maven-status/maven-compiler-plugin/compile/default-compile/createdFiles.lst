@@ -2,6 +2,7 @@ com/example/demo/repository/UserRepository.class
 com/example/demo/events/OrderEvent.class
 com/example/demo/service/OrderService.class
 com/example/demo/service/OrderConsumer.class
+com/example/demo/service/DatabaseInitializer.class
 com/example/demo/model/OrderEntity.class
 com/example/demo/model/ProductEntity.class
 com/example/demo/service/DatabaseSeeder.class

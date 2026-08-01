@@ -67,3 +67,30 @@ mvn spring-boot:run
 curl -X POST "http://localhost:8081/orders?userId=1&productId=1&quantity=2"
 # List orders:
 curl http://localhost:8081/orders
+
+# enter kafka container
+docker exec -it devcontainer-kafka-1 bash
+
+fc8b5ebc6227:/$ find / -name kafka-topics.sh 2>/dev/null
+/opt/kafka/bin/kafka-topics.sh
+
+/opt/kafka/bin/kafka-topics.sh --bootstrap-server localhost:9092 --list
+
+# enter postgres container
+docker exec -it devcontainer-postgres-1 psql -U postgres
+SELECT version();
+\l
+\c springboot
+\dt
+\q
+
+
+lsof -i :8081
+
+# run mvn spring boot inside container
+docker compose -f .devcontainer/docker-compose.yml run --rm --service-ports app mvn spring-boot:run
+
+# with mvn installed
+docker compose -f .devcontainer/docker-compose.yml run --rm --service-ports app bash -lc "apt-get update && apt-get install -y maven && mvn spring-boot:run"
+
+docker compose -f .devcontainer/docker-compose.yml run --rm --service-ports -w /workspace app bash -lc "apt-get update && apt-get install -y maven openjdk-21-jdk && mvn -f pom.xml org.springframework.boot:spring-boot-maven-plugin:3.3.3:run"
